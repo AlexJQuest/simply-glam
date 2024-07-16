@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/simply-glam/static/css/main.abbe965e.css",
-    "main.js": "/simply-glam/static/js/main.b20ebe88.js",
+    "main.js": "/simply-glam/static/js/main.84892c8b.js",
     "static/js/453.27d47936.chunk.js": "/simply-glam/static/js/453.27d47936.chunk.js",
     "static/media/Testimonialbg.png": "/simply-glam/static/media/Testimonialbg.3fd3995cf1d9985f3915.png",
     "static/media/policybgsmall.png": "/simply-glam/static/media/policybgsmall.63ca0f07bc9a39dc2680.png",
@@ -23,11 +23,11 @@
     "static/media/phone.svg": "/simply-glam/static/media/phone.525ac0fff5955088aa0c7694b2249aba.svg",
     "index.html": "/simply-glam/index.html",
     "main.abbe965e.css.map": "/simply-glam/static/css/main.abbe965e.css.map",
-    "main.b20ebe88.js.map": "/simply-glam/static/js/main.b20ebe88.js.map",
+    "main.84892c8b.js.map": "/simply-glam/static/js/main.84892c8b.js.map",
     "453.27d47936.chunk.js.map": "/simply-glam/static/js/453.27d47936.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.abbe965e.css",
-    "static/js/main.b20ebe88.js"
+    "static/js/main.84892c8b.js"
   ]
 }
