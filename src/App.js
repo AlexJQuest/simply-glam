@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/"element={<Home/>}/>
+        <Route path="/simply-glam"element={<Home/>}/>
       </Routes>
     </BrowserRouter>
 
