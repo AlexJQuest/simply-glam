@@ -1,0 +1,25 @@
+.footerwrapper{
+    height: 80px;
+    background-color: #FD9FDD;
+    font: Andada Pro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footerwrapper h2{
+    font-size: 12px;
+    align-items: left;
+    margin-right: 80px;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Use 'contain' if needed */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.logo-image:hover {
+    transform: scale(1.1); /* Scale on hover */
+}

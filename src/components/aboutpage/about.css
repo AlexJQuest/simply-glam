@@ -1,0 +1,42 @@
+.AboutWrapper {
+    background-image: url('./Aboutbg.png');
+    display: flex;                /* Enable flexbox for the wrapper */
+    align-items: center;    
+    justify-content: center;      /* Center items vertically */
+    padding: 10px;
+    padding-top: 5%;                /* Add some padding */
+    padding-bottom: 5%; 
+    padding-left: 250px;
+    gap: 20px;                    /* Space between columns */
+}
+
+.ImageWrapper {
+    flex: 1;                      /* Take up equal space */
+    size: 30%;
+    padding-left: 5%;
+}
+
+.AbouttextWrapper {
+    flex: 2;                      /* Take up more space for text */
+    display: flex;                /* Enable flexbox for text wrapper */
+    flex-direction: column;       /* Stack children vertically */
+    align-items: center;
+}
+
+.HeroHeader h1{
+    font-family: 'Amsterdam';
+    align-items: center;
+    font-size: 30px;
+    stroke-width: 0.6px;  
+    stroke: #FD9FDD;
+    padding-right: 80px;
+
+}
+
+.Abouttext h2{
+    font-size: 20px;            /* Base font size */
+    line-height: 1.2;             /* Line height for readability */
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;      
+    width: 800px;                /* Text color */
+}

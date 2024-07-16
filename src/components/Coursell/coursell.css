@@ -1,0 +1,13 @@
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+  }
+  
+  .carousel-container .carousel-root {
+    width: 50%; /* Adjust the width as needed */
+    max-width: 600px; /* Optional: maximum width */
+    margin: 0 auto; /* Center horizontally */
+  }
+  

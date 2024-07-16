@@ -1,0 +1,23 @@
+.TestWrapper{
+    height: 1000px; /* Reduced height */
+    background-image: url('../Testimonialbg.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;                /* Enable flexbox for the wrapper */
+    justify-content: center;
+    align-items: center;
+}
+
+.CoureselWrapper {
+    flex: 1; 
+    z-index: 1;
+}
+
+.TestHeadWrapper h1{
+    font-family: 'Amsterdam';
+    align-items: center;
+    font-size: 80px;
+    stroke-width: 0.6px;  
+    stroke: #FD9FDD;
+    padding-left: 300px;
+}

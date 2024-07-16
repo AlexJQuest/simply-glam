@@ -1,0 +1,55 @@
+.Hero{
+    background-image: url("./HeroBg.png");
+    background-size: cover;
+    background-color: #FD9FDD;
+    background-position: center;
+    font: Andada Pro;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    display: flex;                /* Enable flexbox for the wrapper */
+    justify-content: center;
+    align-items: center;
+    height: 1150px;
+}
+.HeroContainer{
+    display: flex;            /* Enable flexbox */
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;     /* Center items horizontally */
+    justify-content: center;  /* Center items vertically */
+    height: 400px;  
+
+}    
+
+.HeroTitle{
+    font-family: 'Amsterdam';
+    font-size: 60px;
+    align-items: center;
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;
+}
+
+.Heroslogan{
+    font-family: 'Amsterdam';
+    font-size: 26px;
+    align-items: center;
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;
+    margin-top: -20px;
+}
+
+.CTAButton1{
+    background-color: #F79EDC;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    margin-top: 10px;
+    width: 101%;
+    height: 101%;
+    
+}
+
+
+.CTAButton1:hover {
+    background-color: #F79EDC; /* Green */
+    color: white;
+  }

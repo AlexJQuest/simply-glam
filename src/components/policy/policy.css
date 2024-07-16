@@ -1,0 +1,38 @@
+.policywrapper {
+    height: 400px; /* Reduced height */
+    background-image: url('./policybgsmall.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;                /* Enable flexbox for the wrapper */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;               /* Add some padding */
+    padding-top: 5%;                /* Add some padding */
+    padding-bottom: 5%; 
+}
+
+.PolicyText {
+    flex: 1;                     /* Take up more space for text */
+    display: flex;               /* Enable flexbox for text wrapper */
+    flex-direction: column;      /* Stack children vertically */
+    align-items: flex-start;     /* Align text to the left */
+    text-align: center;            /* Left-align text */
+    padding-left: 150px;          /* Add left padding */
+}
+
+.HeroHeader1 h1{
+    font-family: 'Amsterdam';
+    align-items: center;
+    font-size: 30px;
+    stroke-width: 0.6px;  
+    stroke: #FD9FDD;
+    padding-left: 150px;
+}
+
+.AboutText1 h2{
+    font-size: 20px;            /* Base font size */
+    line-height: 1.2;             /* Line height for readability */
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;      
+    width: 800px; 
+}

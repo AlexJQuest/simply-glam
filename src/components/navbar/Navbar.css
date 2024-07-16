@@ -1,0 +1,62 @@
+.navbar{
+    background-image: url('./Navbg.png');
+    height: 80px;
+    background-color: #FD9FDD;
+    font: Andada Pro;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    z-index: 10;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.logocontainer {
+    width: 15%;
+    height: auto; /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.logo-image {
+    width: 100%;
+    height: auto; /* Maintains aspect ratio */
+    object-fit: cover; /* Use 'contain' if needed */
+    transition: transform 0.2s; /* Smooth scaling effect */
+}
+
+.logo-image:hover {
+    transform: scale(1.1); /* Scale on hover */
+}
+.navContainer{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.NavButton{
+    font: Andada Pro;
+    border: none;
+    background-color: inherit;
+    border-width: 0;
+    margin-left: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.CTAButton{
+    background-color: #F79EDC;
+    margin-left: 20px;
+    border-radius: 30px;
+    transition-duration: 0.4s;
+    
+}
+
+
+.CTAButton:hover {
+    background-color: #F79EDC; /* Green */
+    color: white;
+  }
