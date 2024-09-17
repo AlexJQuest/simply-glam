@@ -83,6 +83,7 @@
     padding: 20px;
     box-sizing: border-box;
     z-index: 9;
+    overflow: hidden; /* Prevent horizontal scrolling */
 }
 
 .mobileMenu .NavButton,
@@ -96,23 +97,19 @@
     .navbar {
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
         height: auto; /* Adjust height for mobile screens */
-        flex-direction: column; /* Stack items vertically */
         align-items: flex-start; /* Align items to the start of the container */
         padding: 10px; /* Add padding for mobile */
         box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
     }
 
     .navContainer {
-        
         max-width: none; /* Remove max-width constraint */
         flex-direction: row; /* Stack nav items vertically */
         flex-wrap: wrap;
         align-items: flex-start; /* Align items to the start */
         justify-content: space-between;
     }
-
 
     .NavButton {
         font-size: 14px; /* Adjust font size for smaller screens */
@@ -140,9 +137,6 @@
     }
 
     .navItems.open {
-        display: block; /* Show nav items when menu is open */
-    }
-    .navItems.open {
         display: flex; /* Show nav items when menu is open */
         position: absolute; /* Position absolute to overlay on content */
         top: 80px; /* Align with the bottom of the navbar */
@@ -155,8 +149,9 @@
         padding: 10px;
         box-sizing: border-box;
         z-index: 9;
-        display: flex;
         flex-direction: column; /* Ensure items are stacked vertically */
         align-items: center;
+        overflow-x: hidden; /* Prevent horizontal scrolling */
+        overflow-y: auto; /* Allow vertical scrolling if needed */
     }
 }

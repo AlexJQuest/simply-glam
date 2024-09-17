@@ -1,4 +1,12 @@
 /* General Styles for Policy Section */
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('./../../fonts/Amsterdam\ 400.ttf') format('ttf'),
+         url('../../fonts/Amsterdam\ Four_ttf\ 400.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
 .policywrapper {
     height: 400px; /* Adjust height as needed */
     background-image: url('./policybgsmall.png');
