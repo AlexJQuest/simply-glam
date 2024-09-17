@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Amsterdam';
+    src: url('https://github.com/AlexJQuest/simply-glam/blob/main/src/fonts/Amsterdam%20400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AmsterdamFour';
+    src: url('https://github.com/AlexJQuest/simply-glam/blob/main/src/fonts/Amsterdam%20Four_ttf%20400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 /* General Styles for Hero Section */
 .Hero {
     background-image: url("./HeroBg.png");

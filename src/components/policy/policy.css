@@ -1,12 +1,16 @@
-/* General Styles for Policy Section */
 @font-face {
     font-family: 'Amsterdam';
-    src: url('./../../fonts/Amsterdam\ 400.ttf') format('ttf'),
-         url('../../fonts/Amsterdam\ Four_ttf\ 400.ttf') format('ttf');
+    src: url('https://github.com/AlexJQuest/simply-glam/blob/main/src/fonts/Amsterdam%20400.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'AmsterdamFour';
+    src: url('https://github.com/AlexJQuest/simply-glam/blob/main/src/fonts/Amsterdam%20Four_ttf%20400.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 .policywrapper {
     height: 400px; /* Adjust height as needed */
     background-image: url('./policybgsmall.png');
