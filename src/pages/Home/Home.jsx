@@ -28,11 +28,11 @@ const Home = () => {
   return (
     <div>
       <Navbar scrollToSection={scrollToSection} />
-      <div ref={heroRef}><Hero /></div>
-      <div ref={aboutRef}><About /></div>
-      <div ref={policyRef}><Policy /></div>
-      <div ref={testimonialsRef}><Testimoials/></div> {/* Ensure Testimonials is correctly imported */}
-      <div><Footer/></div>
+      <div ref={heroRef} className='Herodiv'><Hero /></div>
+      <div ref={aboutRef}  className='Aboutdiv'><About /></div>
+      <div ref={policyRef}  className='Policydiv'><Policy /></div>
+      <div ref={testimonialsRef}  className='Testdiv'><Testimoials/></div> {/* Ensure Testimonials is correctly imported */}
+      <div className='Footerdiv'><Footer/></div>
     </div>
   )
 }

@@ -1,20 +1,23 @@
-.footerwrapper{
-    height: 80px;
+/* General Styles for Footer */
+.footerwrapper {
+    height: 80px; /* Default height */
     background-color: #FD9FDD;
-    font: Andada Pro;
+    font-family: 'Andada Pro', sans-serif; /* Ensure fallback */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
 
-.footerwrapper h2{
-    font-size: 12px;
-    align-items: left;
-    margin-right: 80px;
+.footerwrapper h2 {
+    font-size: 12px; /* Base font size */
+    margin-right: 80px; /* Margin for spacing */
+    text-align: center; /* Center-align text */
 }
 
+/* Ensure that logo-image styles are applied correctly */
 .logo-image {
-    width: 100%;
+    width: 100%; /* Ensure logo scales with container */
     height: auto; /* Maintains aspect ratio */
     object-fit: cover; /* Use 'contain' if needed */
     transition: transform 0.2s; /* Smooth scaling effect */
@@ -22,4 +25,35 @@
 
 .logo-image:hover {
     transform: scale(1.1); /* Scale on hover */
+}
+
+/* Responsive Styles for Tablets */
+@media only screen and (max-width: 1024px) {
+    .footerwrapper {
+        height: auto; /* Adjust height for tablets */
+        padding: 10px; /* Add padding for better spacing */
+    }
+
+    .footerwrapper h2 {
+        font-size: 14px; /* Adjust font size for tablets */
+        margin-right: 40px; /* Reduce margin for smaller screens */
+    }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media only screen and (max-width: 768px) {
+    .footerwrapper {
+        height: auto; /* Adjust height for mobile screens */
+        flex-direction: column; /* Stack items vertically if needed */
+        padding: 10px; /* Add padding for mobile */
+    }
+
+    .footerwrapper h2 {
+        font-size: 10px; /* Adjust font size for mobile screens */
+        margin-right: 0; /* Remove margin for better fit */
+    }
+
+    .logo-image {
+        width: 80%; /* Scale logo down for mobile screens */
+    }
 }

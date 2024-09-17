@@ -6,7 +6,7 @@ const about = () => {
   return (
     <div className= 'AboutWrapper'>
       <div className = "ImageWrapper">
-        <img src={myImage} alt="" style={{ width: 'auto', height: '450px', borderRadius: '10px' }}/>
+        <img className="imagefile" src={myImage} alt="" />
       </div>
       <div className = "AbouttextWrapper">
             <div className= "HeroHeader">

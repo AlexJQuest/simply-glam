@@ -1,55 +1,78 @@
-.Hero{
+/* General Styles for Hero Section */
+.Hero {
     background-image: url("./HeroBg.png");
     background-size: cover;
     background-color: #FD9FDD;
     background-position: center;
-    font: Andada Pro;
+    font-family: 'Andada Pro'; /* Ensure the correct font family */
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    display: flex;                /* Enable flexbox for the wrapper */
+    align-items: center;
+    height: 1150px; /* Original height */
+}
+
+.HeroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 1150px;
-}
-.HeroContainer{
-    display: flex;            /* Enable flexbox */
-    flex-direction: column;  /* Stack items vertically */
-    align-items: center;     /* Center items horizontally */
-    justify-content: center;  /* Center items vertically */
-    height: 400px;  
-
-}    
-
-.HeroTitle{
-    font-family: 'Amsterdam';
-    font-size: 60px;
-    align-items: center;
-    stroke: #FD9FDD;
-    stroke-width: 0.6px;
+    height: 400px; /* Original height */
 }
 
-.Heroslogan{
-    font-family: 'Amsterdam';
-    font-size: 26px;
-    align-items: center;
-    stroke: #FD9FDD;
-    stroke-width: 0.6px;
-    margin-top: -20px;
+.HeroTitle {
+    font-family: 'Amsterdam'; /* Ensure the correct font family */
+    font-size: 60px; /* Original font size */
+    color: #000000; /* Keep original color */
+    margin: 0; /* Maintain original margin */
 }
 
-.CTAButton1{
+.Heroslogan {
+    font-family: 'Amsterdam'; /* Ensure the correct font family */
+    font-size: 26px; /* Original font size */
+    color: #000000; /* Keep original color */
+    margin-top: -20px; /* Original margin */
+}
+
+.CTAButton1 {
     background-color: #F79EDC;
     border-radius: 30px;
     transition-duration: 0.4s;
     margin-top: 10px;
-    width: 101%;
-    height: 101%;
-    
+    width: 101%; /* Keep original width */
+    height: 101%; /* Keep original height */
 }
 
-
 .CTAButton1:hover {
-    background-color: #F79EDC; /* Green */
+    background-color: #F79EDC; /* Maintain hover color */
     color: white;
-  }
+    cursor: pointer;
+}
+
+/* Responsive Styles for Mobile */
+@media only screen and (max-width: 768px) {
+    .Hero {
+        height: 800px; /* Adjust height for mobile screens */
+        padding: 0 10px; /* Add padding to ensure content is not too close to the edges */
+    }
+
+    .HeroContainer {
+        height: auto; /* Adjust height to fit content */
+        padding: 20px; /* Add padding for spacing inside the container */
+    }
+
+    .HeroTitle {
+        font-size: 40px; /* Adjust font size for smaller screens */
+    }
+
+    .Heroslogan {
+        font-size: 18px; /* Adjust font size for smaller screens */
+        margin-top: 10px; /* Adjust margin for better spacing */
+    }
+
+    .CTAButton1 {
+        width: auto; /* Adjust button width to fit content */
+        height: auto; /* Adjust button height to fit content */
+        padding: 10px 20px; /* Adjust padding for button size */
+        font-size: 14px; /* Adjust font size for button text */
+    }
+}

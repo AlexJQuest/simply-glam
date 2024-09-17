@@ -1,11 +1,13 @@
-.TestWrapper{
-    height: 1000px; /* Reduced height */
+/* General Styles for Testimonial Section */
+.TestWrapper {
+    height: 1000px; /* Adjust height as needed */
     background-image: url('../Testimonialbg.png');
     background-size: cover;
     background-position: center;
     display: flex;                /* Enable flexbox for the wrapper */
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;      /* Include padding and borders in element's total width and height */
 }
 
 .CoureselWrapper {
@@ -13,11 +15,41 @@
     z-index: 1;
 }
 
-.TestHeadWrapper h1{
+.TestHeadWrapper h1 {
     font-family: 'Amsterdam';
-    align-items: center;
     font-size: 80px;
     stroke-width: 0.6px;  
     stroke: #FD9FDD;
-    padding-left: 300px;
+    text-align: center; /* Center-align text */
+    margin: 0;          /* Remove margin */
+    padding-left: 0;   /* Remove padding for smaller screens */
+}
+
+/* Responsive Styles for Tablets and Mobile Devices */
+@media only screen and (max-width: 1024px) {
+    .TestWrapper {
+        height: 800px; /* Adjust height for tablets */
+        background-position: center; /* Center background image */
+    }
+
+    .TestHeadWrapper h1 {
+        font-size: 60px; /* Adjust font size for tablets */
+        padding-left: 0; /* Remove padding for better alignment */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .TestWrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: auto; /* Adjust height for mobile screens */
+        background-position: center; /* Center background image */
+        padding: 20px; /* Add padding if needed */
+    }
+
+    .TestHeadWrapper h1 {
+        font-size: 40px; /* Adjust font size for mobile screens */
+        padding-left: 0; /* Remove padding for better alignment */
+    }
 }

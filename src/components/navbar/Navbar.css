@@ -1,19 +1,19 @@
-.navbar{
+/* General Styles for Navbar */
+.navbar {
     background-image: url('./Navbg.png');
     height: 80px;
     background-color: #FD9FDD;
-    font: Andada Pro;
+    font-family: 'Andada Pro', sans-serif; /* Ensure fallback */
     display: flex;
     justify-content: center;
-    align-items: stretch;
-    z-index: 10;
-}
-
-.navbar {
+    align-items: center; /* Center items vertically */
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
+    box-sizing: border-box; /* Include padding and borders in element's total width and height */
 }
+
 .logocontainer {
     width: 15%;
     height: auto; /* Adjust height as needed */
@@ -23,22 +23,24 @@
 .logo-image {
     width: 100%;
     height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Use 'contain' if needed */
+    object-fit: contain; /* Ensure the image is fully visible */
     transition: transform 0.2s; /* Smooth scaling effect */
 }
 
 .logo-image:hover {
     transform: scale(1.1); /* Scale on hover */
 }
-.navContainer{
+
+.navContainer {
     width: 100%;
     max-width: 1024px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.NavButton{
-    font: Andada Pro;
+
+.NavButton {
+    font-family: 'Andada Pro', sans-serif; /* Ensure fallback */
     border: none;
     background-color: inherit;
     border-width: 0;
@@ -47,16 +49,96 @@
     cursor: pointer;
 }
 
-.CTAButton{
+.CTAButton {
     background-color: #F79EDC;
     margin-left: 20px;
     border-radius: 30px;
     transition-duration: 0.4s;
-    
 }
 
-
 .CTAButton:hover {
-    background-color: #F79EDC; /* Green */
+    background-color: #F79EDC; /* Maintain hover color */
     color: white;
-  }
+}
+
+/* Mobile Menu Icon */
+.menu-icon {
+    display: none; /* Hide by default */
+    cursor: pointer;
+}
+
+.menu-icon-image {
+    width: 30px; /* Adjust icon size */
+    height: auto;
+}
+
+/* Mobile Menu */
+.mobileMenu {
+    display: none; /* Hide by default */
+    background-color: #FD9FDD;
+    position: fixed;
+    top: 80px; /* Below the navbar */
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9;
+}
+
+.mobileMenu .NavButton,
+.mobileMenu .CTAButton {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Responsive Styles for Mobile */
+@media only screen and (max-width: 768px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: auto; /* Adjust height for mobile screens */
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start of the container */
+        padding: 10px; /* Add padding for mobile */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    }
+
+    .navContainer {
+        
+        max-width: none; /* Remove max-width constraint */
+        flex-direction: row; /* Stack nav items vertically */
+        flex-wrap: wrap;
+        align-items: flex-start; /* Align items to the start */
+        justify-content: space-between;
+    }
+
+    .NavButton {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Remove margin-left for stacking */
+        margin-bottom: 10px; /* Add space between buttons */
+    }
+
+    .CTAButton {
+        font-size: 14px; /* Adjust font size for smaller screens */
+        margin-left: 0; /* Remove margin-left for stacking */
+        margin-top: 10px; /* Add margin-top to separate from buttons */
+    }
+
+    .logocontainer {
+        width: 30%; /* Adjust width for mobile screens */
+        margin-bottom: 10px; /* Add space below the logo */
+    }
+
+    .menu-icon {
+        display: block; /* Show menu icon */
+    }
+
+    .navItems {
+        display: none; /* Hide regular nav items on mobile */
+    }
+
+    .navItems.open {
+        display: block; /* Show nav items when menu is open */
+    }
+}

@@ -1,5 +1,6 @@
+/* General Styles for Policy Section */
 .policywrapper {
-    height: 400px; /* Reduced height */
+    height: 400px; /* Adjust height as needed */
     background-image: url('./policybgsmall.png');
     background-size: cover;
     background-position: center;
@@ -7,32 +8,74 @@
     justify-content: center;
     align-items: center;
     padding: 20px;               /* Add some padding */
-    padding-top: 5%;                /* Add some padding */
-    padding-bottom: 5%; 
+    box-sizing: border-box;      /* Ensure padding is included in the element's total width and height */
 }
 
 .PolicyText {
     flex: 1;                     /* Take up more space for text */
     display: flex;               /* Enable flexbox for text wrapper */
     flex-direction: column;      /* Stack children vertically */
-    align-items: flex-start;     /* Align text to the left */
-    text-align: center;            /* Left-align text */
-    padding-left: 150px;          /* Add left padding */
+    align-items: center;         /* Center text horizontally */
+    text-align: center;          /* Center-align text */
+    padding-left: 0;            /* Remove left padding for smaller screens */
+    padding-right: 0;           /* Remove right padding for smaller screens */
 }
 
-.HeroHeader1 h1{
+.HeroHeader1 h1 {
     font-family: 'Amsterdam';
-    align-items: center;
     font-size: 30px;
     stroke-width: 0.6px;  
     stroke: #FD9FDD;
-    padding-left: 150px;
+    padding-left: 0;            /* Remove left padding for smaller screens */
+    margin: 0;                  /* Remove margin for better alignment */
 }
 
-.AboutText1 h2{
+.AboutText1 h2 {
     font-size: 20px;            /* Base font size */
-    line-height: 1.2;             /* Line height for readability */
+    line-height: 1.2;           /* Line height for readability */
     stroke: #FD9FDD;
     stroke-width: 0.6px;      
-    width: 800px; 
+    width: 800px;               /* Adjust width as needed */
+    margin: 0;                  /* Remove margin for better alignment */
+}
+
+/* Responsive Styles for Tablets and Mobile Devices */
+@media only screen and (max-width: 1024px) {
+    .policywrapper {
+        height: 300px; /* Adjust height for tablets */
+        background-position: center; /* Center background image */
+    }
+
+    .HeroHeader1 h1 {
+        font-size: 24px;  /* Adjust font size for tablets */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .AboutText1 h2 {
+        font-size: 16px;  /* Adjust font size for tablets */
+        width: 600px;     /* Adjust width */
+        margin-left: 0;  /* Remove left margin */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .policywrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 250px; /* Adjust height for mobile screens */
+        background-position: center; /* Center background image */
+        padding: 10px; /* Adjust padding for mobile screens */
+    }
+
+    .HeroHeader1 h1 {
+        font-size: 20px; /* Adjust font size for mobile screens */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .AboutText1 h2 {
+        font-size: 14px; /* Adjust font size for mobile screens */
+        width: auto;     /* Adjust width */
+        margin-left: 0; /* Remove left margin */
+    }
 }

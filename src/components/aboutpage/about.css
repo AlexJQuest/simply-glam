@@ -1,42 +1,106 @@
+/* General Styles for About Section */
 .AboutWrapper {
     background-image: url('./Aboutbg.png');
-    display: flex;                /* Enable flexbox for the wrapper */
-    align-items: center;    
-    justify-content: center;      /* Center items vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 10px;
-    padding-top: 5%;                /* Add some padding */
-    padding-bottom: 5%; 
+    padding-top: 5%;
+    padding-bottom: 5%;
     padding-left: 250px;
-    gap: 20px;                    /* Space between columns */
+    gap: 20px; /* Space between columns */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .ImageWrapper {
-    flex: 1;                      /* Take up equal space */
-    size: 30%;
+    flex: 1;
     padding-left: 5%;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
 .AbouttextWrapper {
-    flex: 2;                      /* Take up more space for text */
-    display: flex;                /* Enable flexbox for text wrapper */
-    flex-direction: column;       /* Stack children vertically */
+    flex: 2;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
-.HeroHeader h1{
+.HeroHeader h1 {
     font-family: 'Amsterdam';
-    align-items: center;
     font-size: 30px;
-    stroke-width: 0.6px;  
+    stroke-width: 0.6px;
     stroke: #FD9FDD;
     padding-right: 80px;
-
+    margin: 0; /* Reset margin to avoid spacing issues */
+}
+.imagefile{ 
+    width: 'auto'; 
+    height: 450px; 
+    border-radius: 10px; 
+}
+.Abouttext h2 {
+    font-size: 20px; /* Base font size */
+    line-height: 1.2; /* Line height for readability */
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;
+    width: 800px; /* Text width */
+    margin: 0; /* Reset margin to avoid spacing issues */
 }
 
-.Abouttext h2{
-    font-size: 20px;            /* Base font size */
-    line-height: 1.2;             /* Line height for readability */
-    stroke: #FD9FDD;
-    stroke-width: 0.6px;      
-    width: 800px;                /* Text color */
+/* Responsive Styles for Mobile */
+@media only screen and (max-width: 1200px) {
+    .AboutWrapper {
+        padding-left: 20px; /* Reduce padding on medium screens */
+    }
+
+    .HeroHeader h1 {
+        font-size: 26px; /* Adjust font size for medium screens */
+        padding-right: 40px; /* Reduce right padding */
+    }
+
+    .Abouttext h2 {
+        font-size: 18px; /* Adjust font size for medium screens */
+        width: auto; /* Adjust width for better fit */
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .AboutWrapper {
+        flex-direction: column; /* Stack children vertically on small screens */
+        padding-left: 0; /* Remove left padding */
+        align-items: center; /* Center items horizontally */
+        padding: 10px; /* Maintain padding */
+        gap: 10px; /* Adjust gap for mobile */
+    }
+
+    .ImageWrapper {
+        padding-left: 0; /* Remove left padding */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    }
+    .imagefile{ 
+        width: 'auto'; 
+        height: 450px; 
+        border-radius: 10px; 
+    }
+
+    .HeroHeader h1 {
+        font-size: 24px; /* Adjust font size for mobile */
+        padding-right: 0; /* Remove right padding */
+        width: auto; /* Adjust width */
+        margin: 0; /* Remove margin */
+    }
+
+    .AbouttextWrapper {
+        width: 100%; /* Full width */
+        align-items: center; /* Center items horizontally */
+    }
+
+    .Abouttext h2 {
+        font-size: 16px; /* Adjust font size for mobile */
+        width: auto; /* Adjust width for mobile */
+        text-align: center; /* Center align text */
+        margin: 0; /* Remove margin */
+    }
 }
