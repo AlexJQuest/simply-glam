@@ -1,26 +1,30 @@
 /* General Styles for Footer */
 .footerwrapper {
-    height: 80px; /* Default height */
+    height: auto; /* Adjust height based on content */
     background-color: #FD9FDD;
     font-family: 'Andada Pro', sans-serif; /* Ensure fallback */
     display: flex;
     justify-content: center;
     align-items: center;
     box-sizing: border-box; /* Include padding and borders in element's total width and height */
+    padding: 15px 20px; /* Add padding for better spacing */
+    border-top: 2px solid #F5A6C2; /* Add border for visual separation */
+    flex-direction: row; /* Align items horizontally by default */
 }
 
 .footerwrapper h2 {
-    font-size: 12px; /* Base font size */
-    margin-right: 80px; /* Margin for spacing */
+    font-size: 14px; /* Base font size */
+    margin: 0; /* Remove default margin */
     text-align: center; /* Center-align text */
+    color: #fff; /* Ensure text color contrasts well with background */
 }
 
 /* Ensure that logo-image styles are applied correctly */
 .logo-image {
-    width: 100%; /* Ensure logo scales with container */
+    max-width: 150px; /* Set a maximum width for the logo */
     height: auto; /* Maintains aspect ratio */
-    object-fit: cover; /* Use 'contain' if needed */
-    transition: transform 0.2s; /* Smooth scaling effect */
+    object-fit: contain; /* Ensures the logo fits within its container */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
 }
 
 .logo-image:hover {
@@ -30,30 +34,36 @@
 /* Responsive Styles for Tablets */
 @media only screen and (max-width: 1024px) {
     .footerwrapper {
-        height: auto; /* Adjust height for tablets */
-        padding: 10px; /* Add padding for better spacing */
+        flex-direction: column; /* Stack items vertically for tablets */
+        padding: 20px; /* Adjust padding for tablets */
     }
 
     .footerwrapper h2 {
-        font-size: 14px; /* Adjust font size for tablets */
-        margin-right: 40px; /* Reduce margin for smaller screens */
+        font-size: 16px; /* Adjust font size for tablets */
+        margin-bottom: 10px; /* Space below the heading */
+    }
+
+    .logo-image {
+        max-width: 120px; /* Adjust logo size for tablets */
+        margin-bottom: 10px; /* Space below the logo */
     }
 }
 
 /* Responsive Styles for Mobile Devices */
 @media only screen and (max-width: 768px) {
     .footerwrapper {
-        height: auto; /* Adjust height for mobile screens */
-        flex-direction: column; /* Stack items vertically if needed */
-        padding: 10px; /* Add padding for mobile */
+        flex-direction: column; /* Stack items vertically for mobile */
+        align-items: center; /* Center items horizontally in column layout */
+        padding: 15px; /* Add padding for mobile */
     }
 
     .footerwrapper h2 {
-        font-size: 10px; /* Adjust font size for mobile screens */
-        margin-right: 0; /* Remove margin for better fit */
+        font-size: 14px; /* Adjust font size for mobile screens */
+        margin-bottom: 10px; /* Add space below the heading */
     }
 
     .logo-image {
-        width: 80%; /* Scale logo down for mobile screens */
+        max-width: 100px; /* Scale logo down for mobile screens */
+        margin-bottom: 10px; /* Add space below the logo */
     }
 }

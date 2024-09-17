@@ -1,55 +1,65 @@
 /* General Styles for Testimonial Section */
 .TestWrapper {
-    height: 1000px; /* Adjust height as needed */
+    min-height: 600px; /* Ensure a minimum height for smaller content */
     background-image: url('../Testimonialbg.png');
     background-size: cover;
     background-position: center;
-    display: flex;                /* Enable flexbox for the wrapper */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
     justify-content: center;
     align-items: center;
-    box-sizing: border-box;      /* Include padding and borders in element's total width and height */
+    box-sizing: border-box;
+    padding: 20px; /* Ensure padding is applied */
 }
 
 .CoureselWrapper {
-    flex: 1; 
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Maximum width for the carousel */
+    margin: 0 auto; /* Center horizontally */
     z-index: 1;
 }
 
-.TestHeadWrapper h1 {
-    font-family: 'Amsterdam';
-    font-size: 80px;
-    stroke-width: 0.6px;  
-    stroke: #FD9FDD;
-    text-align: center; /* Center-align text */
-    margin: 0;          /* Remove margin */
-    padding-left: 0;   /* Remove padding for smaller screens */
+.TestHeadWrapper {
+    text-align: center; /* Center align the heading */
+    margin-bottom: 20px; /* Space below the heading */
 }
 
-/* Responsive Styles for Tablets and Mobile Devices */
+.TestHeadWrapper h1 {
+    font-family: 'Amsterdam', sans-serif;
+    font-size: 4rem; /* Base font size */
+    stroke-width: 0.6px;
+    stroke: #FD9FDD;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Responsive Styles for Tablets */
 @media only screen and (max-width: 1024px) {
     .TestWrapper {
-        height: 800px; /* Adjust height for tablets */
-        background-position: center; /* Center background image */
+        height: auto; /* Allow height to adjust based on content */
+        padding: 15px; /* Adjust padding for tablets */
+    }
+
+    .CoureselWrapper {
+        max-width: 100%; /* Ensure carousel takes full width on tablets */
     }
 
     .TestHeadWrapper h1 {
-        font-size: 60px; /* Adjust font size for tablets */
-        padding-left: 0; /* Remove padding for better alignment */
+        font-size: 3rem; /* Adjust font size for tablets (similar to About section) */
     }
 }
 
+/* Responsive Styles for Mobile Devices */
 @media only screen and (max-width: 768px) {
     .TestWrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: auto; /* Adjust height for mobile screens */
-        background-position: center; /* Center background image */
-        padding: 20px; /* Add padding if needed */
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    .CoureselWrapper {
+        max-width: 100%; /* Ensure carousel takes full width on mobile */
     }
 
     .TestHeadWrapper h1 {
-        font-size: 40px; /* Adjust font size for mobile screens */
-        padding-left: 0; /* Remove padding for better alignment */
+        font-size: 2rem; /* Reduce font size by 50% for mobile screens */
     }
 }

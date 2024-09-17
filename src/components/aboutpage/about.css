@@ -1,106 +1,102 @@
 /* General Styles for About Section */
-
-@font-face {
-    font-family: 'Amsterdam';
-    src: url('./../../fonts/Amsterdam\ 400.ttf') format('ttf'),
-         url('../../fonts/Amsterdam\ Four_ttf\ 400.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
 .AboutWrapper {
     background-image: url('./Aboutbg.png');
+    background-size: cover;
+    background-position: center;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
-    padding: 10px;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    padding-left: 250px;
-    gap: 20px; /* Space between columns */
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-.ImageWrapper .imagefile {
-    width: 100%;
-    height: auto;
-}
-
-.AbouttextWrapper {
+    justify-content: center; /* Centering horizontally for better alignment */
+    padding: 5% 10%;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  .ImageWrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+    max-width: 100%; /* Ensure wrapper doesn't overflow */
+  }
+  
+  .imagefile {
+    max-width: 100%; /* Ensure the image scales down */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .AbouttextWrapper {
     flex: 2;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-}
-
-.HeroHeader h1 {
-    font-family: 'Amsterdam';
-    font-size: 2rem; /* Base font size */
+    box-sizing: border-box;
+    max-width: 600px; /* Limit the width for readability */
+  }
+  
+  .HeroHeader h1 {
+    font-family: 'Amsterdam', serif;
+    font-size: 60px; /* Keep original font size */
     stroke-width: 0.6px;
     stroke: #FD9FDD;
-    padding-right: 80px;
-    margin: 0; /* Reset margin to avoid spacing issues */
+    margin: 0;
     text-align: center;
-}
-
-.AbouttextWrapper .Abouttext h2 {
-    font-size: 1.25rem; /* Base font size */
-    line-height: 1.5; /* Line height for readability */
+  }
+  
+  .AbouttextWrapper .Abouttext h2 {
+    font-size: 26px; /* Keep original font size */
+    line-height: 1.5;
     stroke: #FD9FDD;
     stroke-width: 0.6px;
-    width: auto; /* Text width */
-    margin: 0; /* Reset margin to avoid spacing issues */
+    margin: 0;
     text-align: center;
-}
-
-/* Responsive Styles for Tablets */
-@media only screen and (max-width: 1024px) {
+  }
+  
+  /* Responsive Styles for Tablets */
+  @media only screen and (max-width: 1024px) {
     .AboutWrapper {
-        padding-left: 20px; /* Reduce padding on medium screens */
+      padding: 5% 5%; /* Reduce padding for tablets */
     }
-
+  
     .HeroHeader h1 {
-        font-size: 1.75rem; /* Adjust font size for tablets */
-        padding-right: 0; /* Remove right padding */
+      font-size: 60px; /* Keep font size for tablets */
     }
-
+  
     .AbouttextWrapper .Abouttext h2 {
-        font-size: 1rem; /* Adjust font size for medium screens */
+      font-size: 26px; /* Keep font size for tablets */
     }
-}
-
-/* Responsive Styles for Mobile */
-@media only screen and (max-width: 768px) {
+  }
+  
+  /* Responsive Styles for Mobile Devices */
+  @media only screen and (max-width: 768px) {
     .AboutWrapper {
-        flex-direction: column; /* Stack children vertically on small screens */
-        padding-left: 0; /* Remove left padding */
-        align-items: center; /* Center items horizontally */
-        padding: 10px; /* Maintain padding */
-        gap: 10px; /* Adjust gap for mobile */
+      flex-direction: column; /* Stack elements vertically */
+      padding: 10px; /* Add padding for better spacing */
+      gap: 10px; /* Reduce gap between elements */
     }
-
-    .ImageWrapper { 
-        width: 80%;
-        border-radius: 10px; 
-        justify-content: space-around;
+  
+    .ImageWrapper {
+      width: 100%; /* Full width of the container */
+      justify-content: center; /* Center the image horizontally */
     }
-
-    .HeroHeader h1 {
-        font-size: 1.25rem; /* Adjust font size for mobile */
-        padding-right: 0; /* Remove right padding */
+  
+    .imagefile {
+      max-width: 90%; /* Adjust size for mobile screens */
+      height: auto; /* Maintain aspect ratio */
     }
-
+  
     .AbouttextWrapper {
-        width: 100%; /* Full width */
-        align-items: center; /* Center items horizontally */
+      width: 100%; /* Ensure full width */
     }
-
-    .Abouttext h2 {
-        font-size: 0.875rem; /* Adjust font size for mobile */
-        width: auto; /* Adjust width for mobile */
-        text-align: center; /* Center align text */
-        margin: 0; /* Remove margin */
+  
+    .HeroHeader h1 {
+      font-size: 30px; /* Reduced font size by 50% for mobile */
     }
-}
+  
+    .AbouttextWrapper .Abouttext h2 {
+      font-size: 13px; /* Reduced font size by 50% for mobile */
+      line-height: 1.4; /* Adjust line height for readability */
+    }
+  }
+  
