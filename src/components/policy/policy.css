@@ -23,23 +23,24 @@
 
 .HeroHeader1 h1 {
     font-family: 'Amsterdam';
-    font-size: 30px;
+    font-size: 2rem; /* Base font size */
     stroke-width: 0.6px;  
     stroke: #FD9FDD;
     padding-left: 0;            /* Remove left padding for smaller screens */
     margin: 0;                  /* Remove margin for better alignment */
+    text-align: center;
 }
 
 .AboutText1 h2 {
-    font-size: 20px;            /* Base font size */
-    line-height: 1.2;           /* Line height for readability */
+    font-size: 1.25rem; /* Base font size */
+    line-height: 1.5;   /* Line height for readability */
     stroke: #FD9FDD;
     stroke-width: 0.6px;      
-    width: 800px;               /* Adjust width as needed */
-    margin: 0;                  /* Remove margin for better alignment */
+    width: 800px;       /* Adjust width as needed */
+    margin: 0;          /* Remove margin for better alignment */
 }
 
-/* Responsive Styles for Tablets and Mobile Devices */
+/* Responsive Styles for Tablets */
 @media only screen and (max-width: 1024px) {
     .policywrapper {
         height: auto; /* Adjust height for tablets */
@@ -47,35 +48,34 @@
     }
 
     .HeroHeader1 h1 {
-        font-size: 24px;  /* Adjust font size for tablets */
+        font-size: 1.75rem;  /* Adjust font size for tablets */
         padding-left: 0; /* Remove left padding */
     }
 
     .AboutText1 h2 {
-        font-size: 16px;  /* Adjust font size for tablets */
+        font-size: 1rem;  /* Adjust font size for tablets */
         width: 600px;     /* Adjust width */
         margin-left: 0;  /* Remove left margin */
     }
 }
 
+/* Responsive Styles for Mobile Devices */
 @media only screen and (max-width: 768px) {
-    .test
     .policywrapper {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        height: 250px; /* Adjust height for mobile screens */
+        flex-direction: column;
+        height: auto; /* Adjust height for mobile screens */
         background-position: center; /* Center background image */
         padding: 10px; /* Adjust padding for mobile screens */
     }
 
     .HeroHeader1 h1 {
-        font-size: 20px; /* Adjust font size for mobile screens */
+        font-size: 1.5rem; /* Adjust font size for mobile screens */
         padding-left: 0; /* Remove left padding */
     }
 
     .AboutText1 h2 {
-        font-size: 14px; /* Adjust font size for mobile screens */
+        font-size: 1rem; /* Adjust font size for mobile screens */
         width: auto;     /* Adjust width */
         margin-left: 0; /* Remove left margin */
     }

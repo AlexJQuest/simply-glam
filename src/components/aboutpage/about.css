@@ -2,8 +2,9 @@
 .AboutWrapper {
     background-image: url('./Aboutbg.png');
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 10px;
     padding-top: 5%;
     padding-bottom: 5%;
@@ -12,15 +13,15 @@
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
 }
 
-.ImageWrapper {
-    flex: 1;
-    padding-left: 5%;
-    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+.ImageWrapper .imagefile {
+    width: 100%;
+    height: auto;
 }
 
 .AbouttextWrapper {
     flex: 2;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
@@ -28,43 +29,41 @@
 
 .HeroHeader h1 {
     font-family: 'Amsterdam';
-    font-size: 30px;
+    font-size: 2rem; /* Base font size */
     stroke-width: 0.6px;
     stroke: #FD9FDD;
     padding-right: 80px;
     margin: 0; /* Reset margin to avoid spacing issues */
-}
-.imagefile{ 
-    width: 'auto'; 
-    height: 450px; 
-    border-radius: 10px; 
-}
-.Abouttext h2 {
-    font-size: 20px; /* Base font size */
-    line-height: 1.2; /* Line height for readability */
-    stroke: #FD9FDD;
-    stroke-width: 0.6px;
-    width: 800px; /* Text width */
-    margin: 0; /* Reset margin to avoid spacing issues */
+    text-align: center;
 }
 
-/* Responsive Styles for Mobile */
-@media only screen and (max-width: 1200px) {
+.AbouttextWrapper .Abouttext h2 {
+    font-size: 1.25rem; /* Base font size */
+    line-height: 1.5; /* Line height for readability */
+    stroke: #FD9FDD;
+    stroke-width: 0.6px;
+    width: auto; /* Text width */
+    margin: 0; /* Reset margin to avoid spacing issues */
+    text-align: center;
+}
+
+/* Responsive Styles for Tablets */
+@media only screen and (max-width: 1024px) {
     .AboutWrapper {
         padding-left: 20px; /* Reduce padding on medium screens */
     }
 
     .HeroHeader h1 {
-        font-size: 26px; /* Adjust font size for medium screens */
-        padding-right: 40px; /* Reduce right padding */
+        font-size: 1.75rem; /* Adjust font size for tablets */
+        padding-right: 0; /* Remove right padding */
     }
 
-    .Abouttext h2 {
-        font-size: 18px; /* Adjust font size for medium screens */
-        width: auto; /* Adjust width for better fit */
+    .AbouttextWrapper .Abouttext h2 {
+        font-size: 1rem; /* Adjust font size for medium screens */
     }
 }
 
+/* Responsive Styles for Mobile */
 @media only screen and (max-width: 768px) {
     .AboutWrapper {
         flex-direction: column; /* Stack children vertically on small screens */
@@ -74,22 +73,15 @@
         gap: 10px; /* Adjust gap for mobile */
     }
 
-    .ImageWrapper {
-        padding-left: 0; /* Remove left padding */
-        width: 100%; /* Full width */
-        box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
-    }
-    .imagefile{ 
-        width: 'auto'; 
-        height: 450px; 
+    .ImageWrapper { 
+        width: 80%;
         border-radius: 10px; 
+        justify-content: space-around;
     }
 
     .HeroHeader h1 {
-        font-size: 24px; /* Adjust font size for mobile */
+        font-size: 1.25rem; /* Adjust font size for mobile */
         padding-right: 0; /* Remove right padding */
-        width: auto; /* Adjust width */
-        margin: 0; /* Remove margin */
     }
 
     .AbouttextWrapper {
@@ -98,7 +90,7 @@
     }
 
     .Abouttext h2 {
-        font-size: 16px; /* Adjust font size for mobile */
+        font-size: 0.875rem; /* Adjust font size for mobile */
         width: auto; /* Adjust width for mobile */
         text-align: center; /* Center align text */
         margin: 0; /* Remove margin */
